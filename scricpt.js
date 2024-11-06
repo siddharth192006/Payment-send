@@ -40,7 +40,7 @@ document.getElementById('payment-form').addEventListener('submit', function(even
         const name = nameField.value;
 
         // Prepare payment URL for UPI
-        const upiUrl = `upi://pay?pa=9604773865@upi&pn=NexForge&am=${amount}&cu=INR&tn=Payment from ${name}`;
+        const upiUrl = `upi://pay?pa=siddharthdeshmukh24@fam&pn=NexForge&am=${amount}&cu=INR&tn=Payment from ${name}`;
 
         // Confirm the redirection
         const userConfirmation = confirm(`You are about to pay ₹${amount}. Do you want to proceed?`);

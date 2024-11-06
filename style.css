@@ -6,89 +6,105 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Roboto', sans-serif; /* Premium font from Google Fonts */
+    background: linear-gradient(135deg, #4e73df, #1c1f38);
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-
-/* Centered container for the payment form */
-.payment-container {
-    background-color: white;
-    width: 400px;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-/* Header styling */
-h1 {
-    font-size: 24px;
-    color: #2a2a2a;
-    margin-bottom: 20px;
-    font-weight: 600;
+.payment-container {
+    background: rgba(0, 0, 0, 0.7); /* Transparent background with dark overlay */
+    width: 400px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(15px); /* Slight blur for depth */
+    position: relative;
 }
 
-/* Form group for styling input fields */
+h1 {
+    font-size: 28px;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #6c5ce7;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-align: left;
 }
 
-/* Input fields */
+label {
+    color: #b3b3b3;
+    font-size: 14px;
+    font-weight: 600;
+}
+
 input[type="text"], input[type="number"] {
     width: 100%;
-    padding: 14px;
-    border: 1px solid #e5e5e5;
+    padding: 15px;
+    border: 2px solid #4e73df;
     border-radius: 8px;
     font-size: 16px;
-    margin-top: 5px;
+    margin-top: 8px;
     outline: none;
-    background-color: #f7f7f7;
-    transition: background-color 0.3s ease;
+    background-color: #fff;
+    color: #333;
+    transition: all 0.3s ease-in-out;
 }
 
 input[type="text"]:focus, input[type="number"]:focus {
-    background-color: #ffffff;
     border-color: #6c5ce7;
+    background-color: #f0f0f0;
 }
 
-/* Error message styling */
+input[type="text"]:hover, input[type="number"]:hover {
+    border-color: #6c5ce7;
+    background-color: #f9f9f9;
+}
+
 .error-message {
-    color: red;
+    color: #ff4d4d;
     font-size: 12px;
     margin-top: 5px;
 }
 
-/* Submit button */
+/* Button styling */
 button {
     width: 100%;
     padding: 15px;
-    background-color: #6c5ce7;
+    background: linear-gradient(45deg, #6c5ce7, #9b59b6);
     color: white;
     font-size: 18px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 1px;
 }
 
 button:hover {
-    background-color: #5a47d1;
+    background: linear-gradient(45deg, #9b59b6, #6c5ce7);
+    transform: scale(1.05);
 }
 
-/* Footer with brand/logo */
 footer {
-    margin-top: 20px;
+    margin-top: 25px;
     font-size: 14px;
-    color: #999;
+    color: #bbb;
 }
 
 footer a {
-    color: #6c5ce7;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -96,14 +112,50 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* Animations for input fields */
+input[type="text"], input[type="number"] {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+button {
+    animation: bounceIn 0.5s ease-in-out;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 /* Responsive design */
 @media (max-width: 480px) {
     .payment-container {
         width: 90%;
-        padding: 15px;
+        padding: 20px;
     }
 
     h1 {
-        font-size: 20px;
+        font-size: 22px;
     }
-}
+
+    button {
+        font-size: 16px;
+    }
+    }
